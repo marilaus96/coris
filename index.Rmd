@@ -1,0 +1,100 @@
+
+<p align="center">
+**Lista de aves observadas, cantidad, grado de amenaza de acuerdo a  la lista roja de la IUCN y estatus**
+</p>
+
+
+
+
+<p align="center">
+Especies|Cantidad|Estado de conservación UICN|Estatus|
+--------| -------|---------------------------|--------
+ *Dendrocygna autumnalis*|3|PM|R
+ *Spatula discors*|72|PM|M
+ *Tachybaptus dominicus*|1|PM|R
+ *Patagioenas flavirostris*|12|PM|R
+ *Columbina inca*|5|PM|R
+ *Columbina talpacoti*|6|PM|R
+ *Leptotila verreauxi*|2|PM|R
+ *Zenaida asiatica*|1|PM|R,M
+ *Zenaida macroura*|3|PM|R,M
+ *Piaya cayana*|1|PM|R
+ *Amazilia saucerottei*|1|PM|R
+ *Amazilia tzacatl*|5|PM|R
+ *Gallinula galeata*|3|PM|R,M
+ *Fulica americana*|9|PM|R,M
+ *Himantopus mexicanus*|28|PM|R,M
+ *Vanellus chilensis*|22|PM|R
+ *Charadrius vociferus*|1|PM|R,M
+ *Jacana spinosa*|13|PM|R
+ *Ardea alba*|3|PM|R,M
+ *Egretta thula*|2|PM|R,M
+ *Egretta caerulea*|6|PM|R,M
+ *Bubulcus ibis*|60|PM|R,M
+ *Butorides virescens*|3|PM|R,M
+ *Coragyps atratus*|9|PM|R
+ *Cathartes aura*|2|PM|R,M
+ *Elanus leucurus*|1|PM|R
+ *Spizaetus tyrannus*|1|PM|R
+ *Rupornis magnirostris*|2|PM|R
+ *Buteo platypterus*|1|PM|M
+ *Buteo brachyurus*|1|PM|R,M
+ *Momotus lessonii*|1|PM|R
+ *Melanerpes hoffmannii*|6|PM|R,END
+ *Milvago chimachima*|1|PM|R
+ *Zimmerius parvus*|1|PM|?
+ *Sayornis nigricans*|4|PM|R
+ *Pitangus sulphuratus*|8|PM|R
+ *Myiozetetes similis*|6|PM|R
+</p>
+
+
+
+
+**Significado de la nomenclatura**
+
+<p align="justify">
+PM	=Preocupación menor
+</p>
+<p align="justify">
+N/A=	No aplica
+</p>
+<p align="justify">
+NT = Casi amenazada
+</p>
+<p align="justify">
+R =Residente
+</p>
+<p align="justify">
+M= Migratorio
+</p>
+<p align="justify">
+END=	Endémico
+</p>
+<p align="justify">
+?	= Desconocido
+</p>
+
+
+```{r}
+Tabla<- read.table("https://raw.githubusercontent.com/marilaus96/reportee/master/reportee.csv",sep = ";",dec =".", header=TRUE) 
+head(Tabla)
+```
+<p align="center">
+```{r}
+pie(table(Tabla$Estatus),main="Estatus de las aves encontradas en Coris", col=rainbow(10))
+```
+</p>
+<p align="center">
+Figura 1. Gráfico de pastel para el estatus de las aves observadas en Coris
+</p>
+
+<p align="center">
+```{r}
+pie(table(Tabla$Estado),main="Estatus de convervación según la UICN", col=rainbow(10))
+```
+</p>
+
+<p align="center">
+Figura 2. Gráfico de pastel para el estatus de conversación según la UICN de las aves observadas en Coris
+</p>

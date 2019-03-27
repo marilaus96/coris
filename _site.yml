@@ -1,0 +1,14 @@
+name: "my-website"
+navbar:
+  title: "Reporte Gira Coris"
+  left:
+    - text: "Reporte 1"
+      href: about.html
+    - text: "Lista de aves"
+      href: index.html
+    - text: "Especie 1 "
+      href: esp1.html
+    - text: "Especie 2 "
+      href: esp2.html
+    - text: "Bibliografía "
+      href: bib.html
